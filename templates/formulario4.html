@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Formulário de Cadastro Social
+{% endblock %}
+
+{% block body %}
+
+{% include 'header.html' %}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">FORMULÁRIO DE CADASTRO SOCIAL</h1>
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            04 - IDENTIFICAÇÃO DO(A) COMPANHEIRO(A) ou CÔNJUGE</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <form action="index.php?acao=adicionar" method="post">
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Tipo de Pessoa</label>
+                            <input type="radio" name="c_tipo" value="1" >
+                            Com.de Bens
+                            <input type="radio" name="c_tipo" value="2" >
+                            Com. Parcial
+                            <input type="radio" name="c_tipo" value="3" >
+                            Sep.de Bens</div>
+                        <div class="col-sm-8 mb-sm-0">
+                            <label>Nome</label>
+                            <input type="text" class="form-control" name="c_nome" value="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label>Nacionalidade</label>
+                            <input type="radio" name="c_nacionalidade" value="Brasileira" > Brasileira
+                            <input type="radio" name="c_nacionalidade" value="Estrangeira" > Estrangeira
+                        </div>
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label>Profissão</label>
+                            <input type="text" class="form-control" name="c_profissao" value="">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label>Estado Cívil</label>
+                            <input type="radio" name="c_estadocivil" value="solteiro" > solteiro
+                            <input type="radio" name="c_estadocivil" value="casado" > casado
+                            <input type="radio" name="c_estadocivil" value="separado judicialmente" > separado judicialmente
+                            <input type="radio" name="c_estadocivil" value="divorciado" > divorciado
+                            <input type="radio" name="c_estadocivil" value="viúvo" > viúvo  
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <label>RG</label>
+                            <input type="text" class="form-control" name="c_rg" value="">
+                        </div>
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <label>CPF</label>
+                            <input type="text" class="form-control" name="c_cpf" value="">
+                        </div>
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <label>CNPJ</label>
+                            <input type="text" class="form-control" name="c_outro" value="">
+                        </div>
+                        
+                    </div>
+                    
+                    <input type="hidden" name="parte" value="5" />
+                    <input type="hidden" name="id" value="<?=$id?>" />
+                    <a class="btn btn-secondary btn-icon-split" href="" style="padding:5px 15px;float:left;">Voltar</a>
+                    
+                    <input type="submit" class="btn btn-primary btn-icon-split" style="padding:5px 15px; float:right;" value="Prosseguir" />  
+                    <div style="clear:both;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+{% include 'footer.html' %}
+{% endblock %}

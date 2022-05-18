@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Formulário de Cadastro Social
+{% endblock %}
+
+{% block body %}
+
+{% include 'header.html' %}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">FORMULÁRIO DE CADASTRO SOCIAL</h1>
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            03 - IDENTIFICAÇÃO DO POSSUIDOR OU PROPRIETÁRIO
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <form action="" method="post">
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Tipo de Pessoa</label>
+                            <input type="radio" name="identificacao" value="1"> Físca
+                            <input type="radio" name="identificacao" value="2"> Jurídica
+                            <input type="radio" name="identificacao" value="3"> Espólio
+                        </div>
+                        <div class="col-sm-8 mb-sm-0">
+                            <label>Nome</label>
+                            <input type="text" class="form-control" name="identificacao_nome" value="">
+                        </div>
+                    </div>
+                    
+                    <h6 style="margin-left:12px;">Endereço</h6>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Logradouro</label>
+                            <input type="text" class="form-control" name="i_logradouro" value="">
+                        </div>
+                        <div class="col-sm-8 mb-3 mb-sm-0">
+                            <label>Nome</label>
+                            <input type="text" class="form-control" name="i_nome" value="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Número</label>
+                            <input type="text" class="form-control" name="i_numero" value="">
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Bloco</label>
+                            <input type="text" class="form-control" name="i_bloco" value="">
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Complemento</label>
+                            <input type="text" class="form-control" name="i_complemento" value="">
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Bairro</label>
+                            <input type="text" class="form-control" name="i_bairro" value="">
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Município</label>
+                            <input type="text" class="form-control" name="i_municipio" value="">
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Estado</label>
+                            <input type="text" class="form-control" name="i_uf" value="">
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Caixa Postal</label>
+                            <input type="text" class="form-control" name="i_caixa" value="">
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>CEP</label>
+                            <input type="text" class="form-control" name="i_cep" value="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Telefone</label>
+                            <input type="text" class="form-control" name="i_telefone" value="">
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Celular</label>
+                            <input type="text" class="form-control" name="i_celular" value="">
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>E-mail</label>
+                            <input type="text" class="form-control" name="i_email" value="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label>Nacionalidade</label>
+                            <input type="radio" name="i_nacionalidade" value="Brasileira" > Brasileira
+                            <input type="radio" name="i_nacionalidade" value="Estrangeira" > Estrangeira
+                        </div>
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label>Profissão</label>
+                            <input type="text" class="form-control" name="i_profissao" value="">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label>Estado Cívil</label>
+                            <input type="radio" name="i_estadocivil" value="solteiro"> solteiro
+                            <input type="radio" name="i_estadocivil" value="casado" > casado
+                            <input type="radio" name="i_estadocivil" value="separado judicialmente" > separado judicialmente
+                            <input type="radio" name="i_estadocivil" value="divorciado" > divorciado
+                            <input type="radio" name="i_estadocivil" value="viúvo" > viúvo                                       
+                        </div>
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label> União Estável</label>
+                            <input type="radio" name="i_uniao" value="sim" > Sim
+                            <input type="radio" name="i_uniao" value="nao" >  Não                                   
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <label>RG</label>
+                            <input type="text" class="form-control" name="i_rg" value="">
+                        </div>
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <label>CPF</label>
+                            <input type="text" class="form-control" name="i_cpf" value="">
+                        </div>
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <label>CNPJ</label>
+                            <input type="text" class="form-control" name="i_cnpj" value="">
+                        </div>
+                        
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <label>Outro Documento</label>
+                            <input type="text" class="form-control" name="i_outro" value="">
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" name="parte" value="4" />
+                    <input type="hidden" name="id" value="<?=$id?>" />
+                    <a class="btn btn-secondary btn-icon-split" href="" style="padding:5px 15px;float:left;">Voltar</a>
+                    <input type="submit" class="btn btn-primary btn-icon-split" style="padding:5px 15px; float:right;" value="Prosseguir" />  
+                    <div style="clear:both;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+        
+{% include 'footer.html' %}
+{% endblock %}

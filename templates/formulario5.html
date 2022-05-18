@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Formulário de Cadastro Social
+{% endblock %}
+
+{% block body %}
+
+{% include 'header.html' %}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">FORMULÁRIO DE CADASTRO SOCIAL</h1>
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            05 - DADOS RELATIVOS À OCUPAÇÃO</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <form action="index.php?acao=adicionar" method="post">
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Litígio?</label>
+                            <input type="radio" name="litigio" value="Sim" > Sim
+                            <input type="radio" name="litigio" value="Nao" > Não
+                            </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Objeto do Litígio</label>
+                            <input type="radio" name="obj_litigio" value="Divisa" > Divisa
+                            <input type="radio" name="obj_litigio" value="Titulação" > Titulação
+                            <input type="radio" name="obj_litigio" value="Ocupação" >  Ocupação
+                            </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Litígio é judicial</label>
+                            <input type="radio" name="jud_litigio" value="Sim" > Sim
+                            <input type="radio" name="jud_litigio" value="Nao" > Não
+                            </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Forma da Ocupação</label>
+                            <input type="radio" name="forma" value="Direta" > Direta
+                            <input type="radio" name="forma" value="Indireta" > Indireta
+                        </div>
+                            <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Imóvel</label>
+                            <input type="text" class="form-control" name="forma_imovel" value="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Tempo de Ocupação</label>
+                            <input type="text" class="form-control" name="tempo_anos" value="">
+                            </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label>Tempo de Posse</label>
+                            <input type="text" class="form-control" name="ocupacao_anos" value="">
+                            </div>
+                    </div>
+                    
+                    
+                    <input type="hidden" name="parte" value="6" />
+                    <input type="hidden" name="id" value="<?=$id?>" />
+                    <a class="btn btn-secondary btn-icon-split" href="index.php?acao=adicionar&parte=4" style="padding:5px 15px;float:left;">Voltar</a>
+                    <input type="submit" class="btn btn-primary btn-icon-split" style="padding:5px 15px; float:right;" value="Prosseguir" />  
+                    <div style="clear:both;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+
+{% include 'footer.html' %}
+{% endblock %}

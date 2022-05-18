@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Bootsrap 4 CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+    <!--Fontawesome CDN -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="{% static 'ccp/css/login.css' %}">
+    <script src="{% static 'ccp/js/bootstrap.min.js' %}"></script>
+    
+    <title>Cadastro de usuários</title>
+</head>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {% comment %} {{form_usuario.username.errors}} {% endcomment %}
+        <label>Usuário: </label>
+        <input type="email" class="form-control text-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+        {% comment %} {{form_usuario.username}} {% endcomment %}
+    </div>
+
+    <div class="form-group">
+        {% comment %} {{form_usuario.password1.errors}} {% endcomment %}
+        <label>Senha: </label>
+        <input type="password" class="form-control text-input" id="exampleInputPassword1" placeholder="Senha">
+        {% comment %} {{form_usuario.password1}} {% endcomment %}
+    </div>
+
+    <div class="form-group">
+        {% comment %} {{form_usuario.password2.errors}} {% endcomment %}
+        <label>Confirmação de senha: </label>
+        <input type="password" class="form-control text-input" id="exampleInputPassword2" placeholder="Senha">
+        {% comment %} {{form_usuario.password2}} {% endcomment %}
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Cadastrar" class="btn btn-primary">
+    </div>
+</form>
+
+</body>
+</html>

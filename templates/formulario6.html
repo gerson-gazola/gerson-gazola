@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Formulário de Cadastro Social
+{% endblock %}
+
+{% block body %}
+
+{% include 'header.html' %}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">FORMULÁRIO DE CADASTRO SOCIAL</h1>
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            06 - INFORMAÇÕES GERAIS SOBRE O IMÓVEL</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <form action="index.php?acao=adicionar" method="post">
+                    <div class="form-group row">
+                        <div class="col-sm-12 mb-3 mb-sm-0">
+                            <label>Ocupação do terreno</label>
+                            <input type="radio" name="ocupacao" value="Construído"> Construído
+                            <input type="radio" name="ocupacao" value="Não construído"> Não construído
+                            <input type="radio" name="ocupacao" value="Ruínas"> Ruínas
+                            <input type="radio" name="ocupacao" value="Em demolição"> Em demolição
+                            <input type="radio" name="ocupacao" value="Construção paralisada"> Construção paralisada
+                            <input type="radio" name="ocupacao" value="Construção em andamento"> Construção em andamento
+                        </div>
+
+                        <div class="col-sm-12 mb-3 mb-sm-0">
+                            <label>Utilização</label>
+                            <input type="radio" name="utilizacao" value="Residencial"> Residencial
+                            <input type="radio" name="utilizacao" value="Comercial"> Comercial
+                            <input type="radio" name="utilizacao" value="Industrial"> Industrial
+                            <input type="radio" name="utilizacao" value="Rural"> Rural
+                            <input type="radio" name="utilizacao" value="Público"> Público
+                            <input type="radio" name="utilizacao" value="Religiosa" > Religiosa
+                            <input type="radio" name="utilizacao" value="Sem uso" > Sem uso
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-12 mb-3 mb-sm-0">
+                            <label>Limites</label>
+                            <input type="radio" name="limites" value="Muro"> Muro
+                            <input type="radio" name="limites" value="Cerca"> Cerca
+                            <input type="radio" name="limites" value="Cerca viva"> Cerca viva
+                            <input type="radio" name="limites" value="Cerca mista"> Cerca mista
+                            <input type="radio" name="limites" value="Alambrado"> Alambrado
+                            <input type="radio" name="limites" value="Gradil"> Gradil
+                            <input type="radio" name="limites" value="Nenhuma"> Nenhuma
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-12 mb-3 mb-sm-0">
+                            <label>Tipos</label>
+                            <input type="checkbox" name="tipo[]" value="Arruamento"> Arruamento<br />
+                            <input type="checkbox" name="tipo[]" value=" Rede de Drenagem"> Rede de Drenagem<br />
+                            <input type="checkbox" name="tipo[]" value="Pavimentação"> Pavimentação<br />
+                            <input type="checkbox" name="tipo[]" value="Galeria de Águas Pluviais"> Galeria de Águas Pluviais<br />
+                            <input type="checkbox" name="tipo[]" value="Guias e Sarjetas"> Guias e Sarjetas<br />
+                            <input type="checkbox" name="tipo[]" value="Água"> Água<br />
+                            <input type="checkbox" name="tipo[]" value="Energia Elétrica"> Energia Elétrica<br />
+                            <input type="checkbox" name="tipo[]" value="Iluminação Pública"> Iluminação Pública<br />
+                            <input type="checkbox" name="tipo[]" value="Esgoto"> Esgoto<br />
+                            <input type="checkbox" name="tipo[]" value="Rede de telefone"> Rede de telefone<br />
+                            <input type="checkbox" name="tipo[]" value="Telefone Público"> Telefone Público<br />
+                            <input type="checkbox" name="tipo[]" value="Rede de fibra ótica"> Rede de fibra ótica<br />
+                            <input type="checkbox" name="tipo[]" value="Gás canalizado"> Gás canalizado<br />
+                            <input type="checkbox" name="tipo[]" value="Conservação Pública"> Conservação Pública<br />
+                            <input type="checkbox" name="tipo[]" value="Arborização"> Arborização<br />
+                            <input type="checkbox" name="tipo[]" value="Transporte Coletivo"> Transporte Coletivo<br />
+                            <input type="checkbox" name="tipo[]" value="Posto de Saúde a menos de 3 Km"> Posto de Saúde a menos de 3 Km<br />
+                            <input type="checkbox" name="tipo[]" value="Escola Primária a menos de 3 Km"> Escola Primária a menos de 3 Km<br />
+                            <input type="checkbox" name="tipo[]" value="Policiamento"> Policiamento 
+                            <input type="checkbox" name="tipo[]" value="Lixo"> Lixo<br />
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-12 mb-3 mb-sm-0">
+                        <label>Observações</label>
+                            <textarea name="obs" rows="5" class="form-control"></textarea>
+                        </div> 
+                    </div>
+                            
+                    <input type="hidden" name="parte" value="7" />
+                    <input type="hidden" name="id" value="" />
+                    <a class="btn btn-secondary btn-icon-split" href="" style="padding:5px 15px;float:left;">Voltar</a>
+                    <input type="submit" class="btn btn-primary btn-icon-split" style="padding:5px 15px; float:right;" value="Prosseguir" />  									
+                    <div style="clear:both;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+{% include 'footer.html' %}
+{% endblock %}
